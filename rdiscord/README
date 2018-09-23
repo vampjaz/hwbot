@@ -1,0 +1,12 @@
+Dependincies:
+
+- python 3.x (might work in 2.x, idk)
+- websocket (https://pypi.org/project/websocket-client/) (required)
+	- with numpy for acceleration (optional; slower websockets without)
+- requests (http://docs.python-requests.org/en/master/) (optional; disables some http functionality without)
+
+```
+pip install websocket_client numpy requests
+```
+
+also need to install Python certificates to get it to work

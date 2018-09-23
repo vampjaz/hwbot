@@ -1,6 +1,8 @@
 ## config for dogecord
 ## different than the rdiscord one
 
+PASS_TO_LISTS = ['READY','GUILD_CREATE','PRESENCE_UPDATE']
+PASS_TO_COMMANDS = ['MESSAGE_CREATE']
 
 COMMAND_PREFIX = '!'
 

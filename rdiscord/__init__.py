@@ -36,7 +36,7 @@ def _socket_connect(ws_url):
 	global wsocket, is_running
 	if config.VERBOSE:
 			print("opening socket...")
-			#websocket.enableTrace(True) # enable this trace temporarily
+			websocket.enableTrace(True) # enable this trace temporarily
 	wsocket = websocket.WebSocketApp(ws_url, on_message=_ws_mesg_cb, on_error=_ws_error_cb, on_close=_ws_close_cb)
 	wsocket.on_open = _ws_open_cb
 	wsocket.run_forever()

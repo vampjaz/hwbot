@@ -12,12 +12,11 @@ class jsonobj:
 	def __init__(self,jsondat):
 		self.rawjson = jsondat
 		self.parsed = json.loads(jsondat)
-		self.created = time.time()
 
 	def get(self,tree,failsafe=None):
 		'''gets an object in the tree indexed by dot notation; 'data.info.date' '''
 		steps = tree.split('.')
-		temptree = self.parsed
+		temptree = self.parsed.copy()
 		for i in steps:
 			temp = temptree.get(i,None)
 			if temp == None:

@@ -9,5 +9,5 @@ def json_request(url):
 
 def auth_data_request(url,data):
 	raw_json = requests.get(url, data=str.encode(data), headers={'User-Agent':config.USER_AGENT, 'Authorization':'Bot '+config.ACTIVE_TOKEN}).text
-	return jsonparse.parse(raw_json)
+	return raw_json
 

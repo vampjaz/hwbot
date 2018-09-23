@@ -6,7 +6,7 @@ LIBRARY_VERSION = 0.1
 LIBRARY_NAME = 'Dogecord'
 LIBRARY_AUTHOR = '@LGA#1151'
 
-ACTIVE_TOKEN = ''
+ACTIVE_TOKEN = '' #stores the token so it can be accessed from all files here
 
 USER_AGENT = "{} {} by {}".format(LIBRARY_NAME, LIBRARY_VERSION, LIBRARY_AUTHOR)
 

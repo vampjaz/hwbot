@@ -8,6 +8,10 @@ def json_request(url):
 	return jsonparse.parse(raw_json)
 
 def auth_data_request(url,data):
-	raw_json = requests.get(url, data=str.encode(data), headers={'User-Agent':config.USER_AGENT, 'Authorization':'Bot '+config.ACTIVE_TOKEN}).text
-	return raw_json
+	print(url)
+	print(data)
+	head = {'User-Agent':config.USER_AGENT, 'Authorization':'Bot '+config.ACTIVE_TOKEN, 'Content-Type':'application/json'}
+	print(head)
+	raw_data = requests.post(url, data=str.encode(data), headers=head).text
+	return raw_data
 

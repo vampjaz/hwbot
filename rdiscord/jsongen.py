@@ -33,4 +33,4 @@ def gen_message(content):
 	newdict = {
 		'content':content.replace('\n','\\n')
 	}
-	return newdict
+	return json.dumps(newdict)
